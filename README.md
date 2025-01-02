@@ -31,3 +31,9 @@ This is a RESTful API for a simple e-commerce platform, built using FastAPI.
     ```
     docker run -p 80:80 fastapi-ecommerce
     ```
+3. Access the API endpoints:
+   ```
+   http://localhost/api/products
+   http://localhost/api/orders
+   ```
+   
