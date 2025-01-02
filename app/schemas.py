@@ -1,5 +1,7 @@
+from app.enums import OrderStatus
 from pydantic import BaseModel
-from typing import List, Optional
+from typing import List
+from enum import Enum
 
 
 class ProductBase(BaseModel):
@@ -32,8 +34,8 @@ class OrderCreate(BaseModel):
 class OrderResponse(BaseModel):
     id: int
     total_price: float
-    status: str
-    products: List[OrderItemBase]
+    status: OrderStatus
+    order_items: List[OrderItemBase]
 
     class Config:
         orm_mode = True
